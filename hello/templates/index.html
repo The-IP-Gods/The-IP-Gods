@@ -3,12 +3,14 @@
 
 {% block content %}
 
-<div class="container">
-    <form id="search">
-      <h2>Search Patent Applications</h2>
-      <input type="text" name="search" class="fill"></input>
-    </form>
-</div>
+<br>
+<form action="/form/" method="post">
+  <h2>Search Patent Applications</h2>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
 <div class="container email">
   <p class="lead">Enter your email address to recive updates:</p>
   <form id="email"><input type="text" name="email" class="fill"></input></form>
