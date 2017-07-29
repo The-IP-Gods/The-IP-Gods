@@ -9,7 +9,7 @@ class IP_Parser(object):
         #each dict key will the name from row one for each respective column
         #each value in the same column will be in a listz   
 
-        file = open('ipgod101.csv','r')
+        file = open('../../Data/ipgod101.csv','r')
 
         ipgod = []
 
