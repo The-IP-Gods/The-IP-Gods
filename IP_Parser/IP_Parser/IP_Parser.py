@@ -1,3 +1,5 @@
+import json
+
 class IP_Parser(object):
     def __init__(self, filename=None):
         pass
@@ -12,6 +14,7 @@ class IP_Parser(object):
         file = open('../../Data/ipgod101.csv','r')
 
         ipgod = []
+        read_lines = []
 
         ###setting up dict keys
         #read in the top line
@@ -20,19 +23,35 @@ class IP_Parser(object):
         #split up top line wth comma ',' as delimter
         keys=keys.rstrip().split(',')
         
-        ipgod.append(keys)
+        #ipgod.append(keys)
         #then loop each element in the "keys" list so that each new 
         for key in keys:
             pass
 
         for line in file:
-            line = file.readline()
             line = line.rstrip().split(',')
-            ipgod.append(line)
+            read_lines.append(line)
 
-        return ipgod
+        for key in keys:
+            temp_list = []
+            for line in read_lines:
+                if not line:
+                    break
+                temp_list.insert(0, line.pop(0))
+            ipgod.insert(0,(key, temp_list))
+        b = dict(ipgod)
+        with open('../../Data/ipgod101JSON.json', 'w') as outfile:
+            json.dump(b, outfile)
+
+    def Read_In_JSON(self):
+        ipgod = {}
+        with open('../../Data/ipgod101JSON.json', 'r') as infile:
+            ipgod = json.load(infile)
+            
+        pass
 
 
 if __name__ == '__main__':
     p = IP_Parser()
-    p.Parse()
+    #p.Parse()
+    p.Read_In_JSON()
