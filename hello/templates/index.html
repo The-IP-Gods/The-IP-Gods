@@ -3,11 +3,9 @@
 
 {% block content %}
 
-<br><br><br>
-
 <div class="container">
     <form id="search">
-      <h1>Search for an application or keyword:</h1>
+      <h2>Search Patent Applications</h2>
       <input type="text" name="search" class="fill"></input>
     </form>
 </div>
@@ -16,36 +14,42 @@
   <form id="email"><input type="text" name="email" class="fill"></input></form>
 </div>
 
+<br>
+<h2>Results</h2>
 
-<div class="container">
-  <div class="row"><b>
-    <div class="col-md-4">Application #</div>
-    <div class="col-md-4">Category</div>
-    <div class="col-md-4">Status</div>
-  </b></div>
-  <div class="row">
-    <a target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2004321298">
-      <div class="col-md-4">#2004321298</div>
-      <div class="col-md-4">Mixed Technology</div>
-      <div class="col-md-4">Lapsed</div>
-    </a>
-  </div>
-  <div class="row">
-    <a target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2016203807">
-      <div class="col-md-4 col-lg-4 col-sm-4">#2016203807</div>
-      <div class="col-md-4 col-lg-4 col-sm-4">Applied Chemistry</div>
-      <div class="col-md-4 col-lg-4 col-sm-4">Accepted</div>
-    </a>
-  </div>
-  <div class="row">
-    <a target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2004321145">
-      <div class="col-md-4">#2004321145</div>
-      <div class="col-md-4">Construction and Mining</div>
-      <div class="col-md-4">Ceased</div>
-    </a>
-  </div>
-</div>
 
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Application #</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Add?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a class="btn btn-primary" target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2004321298">2004321298</a></td>
+          <td>Mixed Technology</td>
+          <td>Lapsed</td>
+          <td><a href="#" class="btn btn-primary">[ ]</a></td>
+        </tr>
+          <td><a class="btn btn-primary" target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2016203807">2016203807</a></td>
+          <td>Applied Chemistry</td>
+          <td>Accepted</td>
+          <td><a href="#" class="btn btn-primary">[ ]</a></td>
+        </tr>
+        <tr>
+          <td><a class="btn btn-primary" target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2004321145">2004321145</a></td>
+          <td>Construction and Mining</td>
+          <td>Ceased</td>
+          <td><a href="#" class="btn btn-primary">[ ]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 {% endblock %}
