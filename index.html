@@ -27,6 +27,10 @@
       align: center;
       height: 100%;
     }
+    .fill {
+      align: center;
+      width: 100%;
+    }
     </style>
   </head>
   <body>
@@ -68,15 +72,39 @@
 
   <br><br><br><br>
   <div class="container">
-      <form>
+      <form id="search">
         <h1>Search for an application or keyword:</h1>
-        <input type="text" name="search"></input>
+        <input type="text" name="search" class="fill"></input>
       </form>
   </div>
   <div class="container email">
-    <p class="lead">Enter your email address to recive updates: <form><input type="text" name="search"></input></form></p>
+    <p class="lead">Enter your email address to recive updates:</p>
+    <form id="email"><input type="text" name="email" class="fill"></input></form>
   </div>
 
+
+  <div class="container">
+    <div class="row"><b>
+      <div class="col-md-4">Application #</div>
+      <div class="col-md-4">Category</div>
+      <div class="col-md-4">Status</div>
+    </b></div>
+    <div class="row">
+      <div class="col-md-4">#8402</div>
+      <div class="col-md-4">Electronics</div>
+      <div class="col-md-4">Accepted</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">#938</div>
+      <div class="col-md-4">Medical</div>
+      <div class="col-md-4">Rejected</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">#2049</div>
+      <div class="col-md-4">Construction</div>
+      <div class="col-md-4">Registered</div>
+    </div>
+  </div>
 
     <footer class="footer">
       <div class="container">
