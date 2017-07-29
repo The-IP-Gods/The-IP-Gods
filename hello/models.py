@@ -6,8 +6,8 @@ class Greeting(models.Model):
 
 class Keywords(models.Model):
     email = models.EmailField()
-    keywords = models.CharField()
+    keywords = models.CharField(max_length=100)
 
 class AppNums(models.Model):
     email = models.EmailField()
-    appnums = models.CharField()
+    appnums = models.CharField(max_length=100)
