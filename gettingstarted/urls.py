@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^form/', hello.views.form, name='form'),
     url(r'^histtrends/', hello.views.histtrends, name='histtrends'),
+    url(r'^addappmonitor/', hello.views.addappmonitor, name='addappmonitor'),
     url(r'^team/', hello.views.team, name='team'),
     url(r'^monitor/', hello.views.monitor, name='monitor'),
 ]

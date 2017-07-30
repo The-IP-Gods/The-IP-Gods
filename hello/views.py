@@ -46,6 +46,9 @@ def db(request):
 def histtrends(request):
     return render(request, 'histtrends.html')
 
+def addappmonitor(request):
+    return render(request, 'addappmonitor.html')
+
 def form(request):
     results = []
     csv.field_size_limit(sys.maxsize)
