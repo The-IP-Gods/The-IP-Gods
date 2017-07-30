@@ -27,15 +27,15 @@ def index(request):
             if form.cleaned_data['email'] != "":
                 Keywords.objects.create(email=form.cleaned_data['email'], keywords=form.cleaned_data['keywords']).save()
             reader122a = csv.reader(open('hello/static/ipgod122a.csv'))
+            reader107 = csv.reader(open('hello/static/ipgod107.csv'))
             for line in reader122a:
                 if form.cleaned_data['keywords'] in line[1]:
-                    reader107 = csv.reader(open('hello/static/ipgod107.csv'))
                     for line107 in reader107:
                         if line[0] == line107[0]:
                             status = line107[9]
                             category = line107[6]
-                    results.append((line[0],line[1],line107[9],line107[6]))
-            return render(request, 'results.html', {'results': results})
+                            results.append((line[0],line[1],line107[9],line107[6]))
+            return render(request, 'index.html', {'results': results})
     else:
         form = NameForm()
     return render(request, 'index.html', {'form': form})
