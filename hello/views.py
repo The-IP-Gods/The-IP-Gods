@@ -80,3 +80,6 @@ def form(request):
 
 def team(request):
     return render(request, 'team.html')
+
+def monitor(request):
+    return render(request, 'monitor.html')
