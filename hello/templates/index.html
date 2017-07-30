@@ -3,6 +3,22 @@
 
 {% block content %}
 
+<script>
+var count=1;
+function setColor(btn, color){
+    var property = document.getElementById(btn);
+    if (count == 0){
+        property.style.backgroundColor = "#337AB7"
+        count=1;        
+    }
+    else{
+        property.style.backgroundColor = "#7FFF00"
+        count=0;
+    }
+
+}
+</script>
+
 <br>
 <form action="/" method="post">
   <h2>Search Patent Applications</h2>
@@ -31,7 +47,7 @@
           <td><a class="btn btn-primary" target="_blank" href="http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo={{ result.0 }}">{{ result.0 }}</a></td>
           <td>{{ result.2 }}</td>
           <td>{{ result.1 }} </td>
-          <td><a href="#" class="btn btn-primary">[ ]</a></td>
+          <td><a href="#" id='button{{ result.0 }}' class="btn btn-primary" onclick="setColor('button{{ result.0 }}','#101010')">[ ]</a></td>
         </tr>
         {% endfor %}
       </tbody>
