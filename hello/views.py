@@ -74,3 +74,6 @@ def form(request):
         form = NameForm()
 
     return render(request, 'name.html', {'form': form})
+
+def team(request):
+    return render(request, 'team.html')
