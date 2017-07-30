@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^form/', hello.views.form, name='form'),
+    url(r'^histtrends/', hello.views.histtrends, name='histtrends'),
 ]

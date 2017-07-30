@@ -43,6 +43,9 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def histtrends(request):
+    return render(request, 'histtrends.html')
+
 def form(request):
     results = []
     csv.field_size_limit(sys.maxsize)

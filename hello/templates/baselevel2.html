@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>IP God Tech</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      align: center;
+    }
+    .email {
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+    }
+    .filler {
+      align: center;
+      height: 100%;
+    }
+    .fill {
+      align: center;
+      width: 100%;
+    }
+    .navbar {
+      background-color: black;
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body>
+
+
+  <nav class="navbar navbar-inverse navbar-top"> <!-- Fixed navbar -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../static/logo_4.png" width=100px align="left" class="img-responsive header-img"></img>
+        <a class="navbar-brand" href="http://ipgod.tech"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../#about"><button type="button" class="btn btn-primary">My Monitors</button></a></li>
+          <li><a href="../#contact"><button type="button" class="btn btn-primary">The Team</button></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><button type="button" class="btn btn-primary">More Actions <span class="caret"></span></button></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Monitor Applications</li>
+              <li><a href="#"><button type="button" class="btn btn-primary">Add Keyword Monitor</button></a></li>
+              <li><a href="#"><button type="button" class="btn btn-primary">Add Application Monitor</button></a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Historical Information</li>
+              <li><a href="/histtrends/"><button type="button" class="btn btn-primary">Historical Trends</button></a></li>
+              <li><a href="#"><button type="button" class="btn btn-primary">Historical Averages</button></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+{% block content %}{% endblock %}
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">GPL3 and ©2017 Trent Torkar, Riley Baird, Ben Minerds and Jake Pringle</p>
+  </div>
+</footer>
+
+</body>
+</html>

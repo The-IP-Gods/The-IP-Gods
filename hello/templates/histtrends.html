@@ -1,0 +1,24 @@
+{% extends "baselevel2.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<p>
+This page contains statistics about the historical trends related to patent
+approval time.
+</p>
+
+<p>
+From this data, it can be seen that:
+</p>
+<ul>
+	<li>Innovation patents are processed much faster than standard patents</li>
+	<li>The average standard patent processing time is 4.09 years</li>
+	<li>The category of patent with the fastest processing time is ELEC 3 - Computing, with an average time of 3.50 years.</li>
+	<li>The category of patent with the longest processing time is CHEM 1 - Biotechnology</li>
+	<li>Patents in the first half of the year are slightly faster than patents in the second half of the year</li>
+</ul>
+
+<img width="100%" height="70%" src="../static/Statistics.png"/>
+
+{% endblock %}
