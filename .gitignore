@@ -103,4 +103,4 @@ ENV/
 .mypy_cache/
 
 #Ignore large .csv
-/Data
+#/Data #including now parsed data that has been zipped for others review if curious
