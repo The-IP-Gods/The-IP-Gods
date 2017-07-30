@@ -1,24 +1,22 @@
-# Python: Getting Started
+# The IP Gods
 
-A barebones Django app, which can easily be deployed to Heroku.
+This project was created by "The IP Gods" for GovHack 2017. It is a Django app, which allows users to check on the status of patent and trademark applications. It is hosted on heroku and can be accessed through the custom domain [ipgod.tech](http://ipgod.tech)
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+## Project Links
+
+- [Project Page](https://2017.hackerspace.govhack.org/project/ip-gods)
+- [GitHub Org](https://github.com/The-IP-Gods)
+- [Video](https://youtube.com/somewhere)
+
+## Data Sets
+
+We made extensive use of the [Intellectual Property Government Open Data](https://2017.hackerspace.govhack.org/dataset/intellectual-property-government-open-data-2017-govhack) from 2017
 
 ## Running Locally
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
-
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
-
-$ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
-
+```bash
+$ git clone https://github.com/The-IP-Gods/The-IP-Gods.git
+$ cd The-IP-Gods
 $ heroku local
 ```
 
@@ -26,19 +24,15 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 
-```sh
-$ heroku create
-$ git push heroku master
+Deployment to Heroku is achieved through Continuious Integration on Semaphore. This means all pushes to master on github will result in a deploy to the Heroku server.
 
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
+[![Build Status](https://semaphoreci.com/api/v1/puzzleduck/the-ip-gods/branches/master/badge.svg)](https://semaphoreci.com/puzzleduck/the-ip-gods)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+## The IP Gods Team
 
-## Documentation
+The IP Gods are:
 
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+- Trent Torkar,
+- Riley Baird,
+- Ben Minerds, and
+- Jake Pringle
